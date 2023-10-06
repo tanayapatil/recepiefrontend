@@ -1,0 +1,18 @@
+.imgHeading{
+    color: rgb(226, 134, 13);
+    font-weight: bold;
+    font-size: 1.2rem;
+    font-family: Arvo,Georgia,Cambria,Times New Roman,Times,serif;
+    margin-top: 10px;
+   
+    
+    
+}
+
+.imgtransform{
+    transition: all .2s ease-in-out; 
+}
+.imgtransform:hover{
+    transform: scale(1.5); 
+    
+}

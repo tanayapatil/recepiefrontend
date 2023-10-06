@@ -1,23 +1,53 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header';
+import Slider from './components/Slider';
+import LatestRecepies from './components/LatestRecepies';
+import Home from './components/Home';
+import Recipies from './components/Recipies';
+import SingleRecepie from './components/SingleRecepie';
+import Myadmin from './components/Myadmin';
+
+import { Route, Routes } from 'react-router-dom'
+import DataState from './components/Context/DataState';
+import Addrecepies from './components/Addrecepies';
+import { Navigate } from 'react-router-dom';
+import Protected from './components/Protected';
+import Protectedsecond from './components/Protectedsecond';
+import Footer from './components/Footer';
+
+
+
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <DataState>
+        <Header />
+        {/* <Slider/>
+      <LatestRecepies/> */}
+        <Routes>
+
+
+          <Route path="/addrecepie" element={<Protected Component={Addrecepies} />} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/recepies" element={<Recipies />} />
+          <Route path="/SingleRecepie/:name/:id" element={<SingleRecepie />} />
+          {/* <Route path="/myadmin" element={<Myadmin />} /> */}
+          <Route path="/myadmin" element={<Protectedsecond Component={Myadmin} />} />
+          {/* <Route path="/myadmin" element={<Myadmin />} /> */}
+
+
+          <Route path="*" element={<Navigate to="/" />} />
+
+
+
+        </Routes>
+        <Footer   />
+      </DataState>
+
     </div>
   );
 }

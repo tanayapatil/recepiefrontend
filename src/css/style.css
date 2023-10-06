@@ -1,0 +1,12 @@
+:root{
+    --bs-emphasis-color-rgb:white;
+   
+}
+
+.navbg{
+    background-color:purple;
+    color: var(--bs-emphasis-color-rgb);
+}
+.menuBox{
+    margin-left: 1rem;
+}
