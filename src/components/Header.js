@@ -12,12 +12,11 @@ const Header = () => {
         <>
             <Navbar className='navbg'   fixed="top" >
                 <Container >
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Navbar.Brand href="#home">शिदोरी </Navbar.Brand>
                     <Nav>
-                        <Nav.Link as={Link} to="/">Home</Nav.Link>
-                        <Nav.Link  as={Link} to="/recepies" >Recipies</Nav.Link>
-                        <Nav.Link href="#pricing">About</Nav.Link>
-                        <Nav.Link href="#pricing">Contact</Nav.Link>
+                        <Nav.Link as={Link} to="/">होम</Nav.Link>
+                        <Nav.Link  as={Link} to="/recepies" >रेसिपीस</Nav.Link>
+                        
                     </Nav>
                 </Container>
             </Navbar>

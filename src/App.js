@@ -15,6 +15,7 @@ import { Navigate } from 'react-router-dom';
 import Protected from './components/Protected';
 import Protectedsecond from './components/Protectedsecond';
 import Footer from './components/Footer';
+// import Footercatagory from './components/Footercatagory';
 
 
 
@@ -38,6 +39,7 @@ function App() {
           {/* <Route path="/myadmin" element={<Myadmin />} /> */}
           <Route path="/myadmin" element={<Protectedsecond Component={Myadmin} />} />
           {/* <Route path="/myadmin" element={<Myadmin />} /> */}
+          {/* <Route path="/footercatagory/:cat" element={<Footercatagory />} /> */}
 
 
           <Route path="*" element={<Navigate to="/" />} />
