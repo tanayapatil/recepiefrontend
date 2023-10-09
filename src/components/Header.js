@@ -12,7 +12,7 @@ const Header = () => {
         <>
             <Navbar className='navbg'   fixed="top" >
                 <Container >
-                    <Navbar.Brand href="/">शिदोरी </Navbar.Brand>
+                    <Navbar.Brand >शिदोरी </Navbar.Brand>
                     <Nav>
                         <Nav.Link as={Link} to="/">होम</Nav.Link>
                         <Nav.Link  as={Link} to="/recepies" >रेसिपीस</Nav.Link>
