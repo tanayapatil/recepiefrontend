@@ -37,7 +37,7 @@ const Recipies = () => {
                                         <Col lg={1}></Col>
                                         <Col lg={7} className='ml-5 '>
                                             <div className='latestRecepieName'> {value.name}</div>
-                                            <div className='latestRecepieDes mt-1'>{value.description}</div>
+                                            <div className='latestRecepieDes mt-1'>{value.description.substring(0, 250)}</div>
                                             <Link to={`/SingleRecepie/${value._id}`} > <Button variant="outline-danger">Load More ....</Button></Link>
                                         </Col>
 
