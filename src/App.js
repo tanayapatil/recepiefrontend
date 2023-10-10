@@ -35,7 +35,7 @@ function App() {
           <Route path="/addrecepie" element={<Protected Component={Addrecepies} />} />
           <Route path="/" exact element={<Home />} />
           <Route path="/recepies" element={<Recipies />} />
-          <Route path="/SingleRecepie/:name/:id" element={<SingleRecepie />} />
+          <Route path="/SingleRecepie/:id" element={<SingleRecepie />} />
           {/* <Route path="/myadmin" element={<Myadmin />} /> */}
           <Route path="/myadmin" element={<Protectedsecond Component={Myadmin} />} />
           {/* <Route path="/myadmin" element={<Myadmin />} /> */}
