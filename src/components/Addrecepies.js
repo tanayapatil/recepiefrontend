@@ -90,7 +90,7 @@ const Addrecepies = () => {
                     <option value="shravanrecepie">श्रावण रेसिपी</option>
                     <option value="ladoo">लाडू</option>
                     <option value="khir">खीर</option>
-                    <option value="cake">केक</option>
+                    <option value="sweet">स्वीट्स</option>
                   </Form.Select>
                 </Col>
               </Form.Group>

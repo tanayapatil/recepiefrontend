@@ -41,6 +41,7 @@ const Catagorywise = () => {
                             <Button variant="outline-danger" onClick={() => { filteredItem('sweet') }}>श्रावण रेसिपी</Button>
                             <Button variant="outline-danger">लाडू</Button>
                             <Button variant="outline-danger">खीर</Button>
+                            <Button variant="outline-danger">स्वीट्स</Button>
                             <Button onClick={getAllRecepies} variant="outline-danger" >सर्व रेसिपी</Button>
 
                         </div>
