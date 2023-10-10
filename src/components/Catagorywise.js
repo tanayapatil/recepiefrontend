@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col, { useCol } from 'react-bootstrap/Col';
@@ -11,6 +11,8 @@ const Catagorywise = () => {
     const context = useContext(dataContext)
     const { items, getAllRecepies, setItems } = context
 
+    const [myitem,setMyitem]=useState(items)
+
     const filteredItem = (value) => {
         
 
@@ -18,17 +20,22 @@ const Catagorywise = () => {
             return ele.catagory === value
         })
 
-        setItems(myvalue)
+        setMyitem(myvalue)
         
 
 
     }
 
+    const myallRecipes=()=>{
+         setMyitem(items)
+    }
+
+
+
    
 
-    useEffect(()=>{
-        getAllRecepies()
-    },[])
+   
+
     return (
         <>
 
@@ -42,7 +49,7 @@ const Catagorywise = () => {
                             <Button variant="outline-danger"  onClick={() => { filteredItem('ladoo') }}>लाडू</Button>
                             <Button variant="outline-danger"  onClick={() => { filteredItem('khir') }}>खीर</Button>
                             <Button variant="outline-danger"  onClick={() => { filteredItem('sweet') }}>स्वीट्स</Button>
-                            <Button onClick={getAllRecepies} variant="outline-danger" >सर्व रेसिपी</Button>
+                            <Button onClick={myallRecipes} variant="outline-danger"    >सर्व रेसिपी</Button>
 
                         </div>
 
@@ -50,7 +57,7 @@ const Catagorywise = () => {
                 </Row>
 
                 <Row className='mt-4'>
-                    {items && items.map((value, index) => {
+                    {myitem && myitem.map((value, index) => {
                         return (
                             <>
                              
@@ -59,7 +66,7 @@ const Catagorywise = () => {
                                     {/* <div className='mt-5'><img src={`http://localhost:2000/${value.image}` }  style={{ height: '150px', width: '150px' }} /></div>
                                     <div className='imgHeading'>{value.name}</div> */}
                                     <Row>
-                                    <Link to={`/SingleRecepie/${value.name}/${value._id}`} > <Col className='mt-5 imgtransform' lg={12}><img src={`https://mernrecepiebackend.onrender.com/${value.image}`} style={{ height: '150px', width: '150px' }} /></Col></Link>
+                                    <Link to={`/SingleRecepie/${value._id}`} > <Col className='mt-5 imgtransform' lg={12}><img src={`https://mernrecepiebackend.onrender.com/${value.image}`} style={{ height: '150px', width: '150px' }} /></Col></Link>
                                     </Row>
                                     <Row>
                                         <Col className='imgHeading' lg={12} >{value.name}</Col>
