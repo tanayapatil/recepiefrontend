@@ -38,7 +38,7 @@ const Recipies = () => {
                                         <Col lg={7} className='ml-5 '>
                                             <div className='latestRecepieName'> {value.name}</div>
                                             <div className='latestRecepieDes mt-1'>{value.description}</div>
-                                            <Link to={`/SingleRecepie/${value.name}/${value._id}`} > <Button variant="outline-danger">Load More ....</Button></Link>
+                                            <Link to={`/SingleRecepie/${value._id}`} > <Button variant="outline-danger">Load More ....</Button></Link>
                                         </Col>
 
 
