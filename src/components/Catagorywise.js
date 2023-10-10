@@ -38,10 +38,10 @@ const Catagorywise = () => {
                     <Col lg={10} >
                         <div className='d-flex justify-content-evenly'>
 
-                            <Button variant="outline-danger" onClick={() => { filteredItem('sweet') }}>श्रावण रेसिपी</Button>
-                            <Button variant="outline-danger">लाडू</Button>
-                            <Button variant="outline-danger">खीर</Button>
-                            <Button variant="outline-danger">स्वीट्स</Button>
+                            <Button variant="outline-danger" onClick={() => { filteredItem('shravanrecepie') }}>श्रावण रेसिपी</Button>
+                            <Button variant="outline-danger"  onClick={() => { filteredItem('ladoo') }}>लाडू</Button>
+                            <Button variant="outline-danger"  onClick={() => { filteredItem('khir') }}>खीर</Button>
+                            <Button variant="outline-danger"  onClick={() => { filteredItem('sweet') }}>स्वीट्स</Button>
                             <Button onClick={getAllRecepies} variant="outline-danger" >सर्व रेसिपी</Button>
 
                         </div>
