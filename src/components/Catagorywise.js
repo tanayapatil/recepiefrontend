@@ -66,7 +66,7 @@ const Catagorywise = () => {
                                     {/* <div className='mt-5'><img src={`http://localhost:2000/${value.image}` }  style={{ height: '150px', width: '150px' }} /></div>
                                     <div className='imgHeading'>{value.name}</div> */}
                                     <Row>
-                                    <Link to={`/SingleRecepie/${value._id}`} > <Col className='mt-5 imgtransform' lg={12}><img src={`https://mernrecepiebackend.onrender.com/${value.image}`} style={{ height: '150px', width: '150px' }} /></Col></Link>
+                                    <Link to={`/SingleRecepie/${value._id}`} > <Col className='mt-5 imgtransform' lg={12}><img src={`https://mernrecepiebackend.onrender.com/uploads/${value.image}`} style={{ height: '150px', width: '150px' }} /></Col></Link>
                                     </Row>
                                     <Row>
                                         <Col className='imgHeading' lg={12} >{value.name}</Col>
