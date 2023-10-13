@@ -40,7 +40,7 @@ const Footer = () => {
             <h6 className='mt-3 text-center '>पॉप्युलर रेसिपी </h6>
             <hr />
             {
-              myfooter.slice(0, 5).map((value, index) => {
+              items.slice(0, 5).map((value, index) => {
                 return (
                   <ul >
                     <Link className='linkStyle' to={`/SingleRecepie/${value._id}`} ><li  >{value.name}</li></Link>
