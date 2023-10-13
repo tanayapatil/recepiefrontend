@@ -69,7 +69,9 @@ const SingleRecepie = () => {
             })}
 
           </Col>
-          <Col lg={4}>Right Sidebar</Col>
+          <Col lg={4}>
+            {/* Right Sidebar */}
+            </Col>
         </Row>
 
         <Row className='mt-5'></Row>
