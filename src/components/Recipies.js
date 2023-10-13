@@ -33,7 +33,7 @@ const Recipies = () => {
                             return (
                                 <>
                                     <Row key={value._id}>
-                                        <Col lg={4}  >  <img src={`https://mernrecepiebackend.onrender.com/${value.image}`} style={{ height: '200px', width: '200px' }} /></Col>
+                                        <Col lg={4}  > <img src={`https://mernrecepiebackend.onrender.com/${value.image}`} style={{ height: '200px', width: '200px' }} /></Col>
                                         <Col lg={1}></Col>
                                         <Col lg={7} className='ml-5 '>
                                             <div className='latestRecepieName'> {value.name}</div>

@@ -16,6 +16,7 @@ const Footer = () => {
 
   const context = useContext(dataContext)
   const { items, getAllRecepies } = context
+  const [myfooter,setmyFooter]=useState(items)
   // const[data,setData]=useState('')
 
   // const handleClick=(myId)=>{
@@ -39,7 +40,7 @@ const Footer = () => {
             <h6 className='mt-3 text-center '>पॉप्युलर रेसिपी </h6>
             <hr />
             {
-              items.slice(0, 5).map((value, index) => {
+              myfooter.slice(0, 5).map((value, index) => {
                 return (
                   <ul >
                     <Link className='linkStyle' to={`/SingleRecepie/${value._id}`} ><li  >{value.name}</li></Link>

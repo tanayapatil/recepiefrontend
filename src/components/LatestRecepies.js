@@ -8,11 +8,13 @@ import { Link } from 'react-router-dom';
 
 const LatestRecepies = () => {
   const [items, setItems] = useState('')
+  
   const getAllRecepies = async () => {
     const result = await fetch('https://mernrecepiebackend.onrender.com/api/allItem')
     const responce = await result.json()
     console.log(responce)
     setItems(responce)
+   
   }
   useEffect(() => {
     getAllRecepies()
@@ -43,11 +45,11 @@ const LatestRecepies = () => {
                   </div>
                   <hr className='hLine' /> */}
 
-
+                     {console.log(value.image)}
 
                           
                   <Row key={value._id}>
-                    <Col lg={4}  >  <img src={`https://mernrecepiebackend.onrender.com/${value.image}` }  style={{ height: '200px', width: '200px' }} /></Col>
+                    <Col lg={4}  >{ value._id &&  <img src={`https://mernrecepiebackend.onrender.com/${value.image}` }  style={{ height: '200px', width: '200px' }} /> } </Col>
                     <Col lg={1}></Col>
                     <Col lg={7}  className='ml-5 '>
                     <div className='latestRecepieName'> {value.name}</div>
