@@ -27,7 +27,7 @@ const Footer = () => {
 
   useEffect(() => {
     getAllRecepies()
-  })
+  },[])
 
 
 
