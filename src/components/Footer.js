@@ -16,7 +16,7 @@ const Footer = () => {
 
   const context = useContext(dataContext)
   const { items, getAllRecepies } = context
-  const [myfooter,setmyFooter]=useState(items)
+  // const [myfooter,setmyFooter]=useState(items)
   // const[data,setData]=useState('')
 
   // const handleClick=(myId)=>{
