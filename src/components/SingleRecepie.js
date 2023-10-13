@@ -47,7 +47,7 @@ const SingleRecepie = () => {
                 </Row>
                 <Row>
                   <Col lg={3}></Col>
-                  <Col lg={6} className='mt-3'><img src={`https://mernrecepiebackend.onrender.com/${value.image}`} style={{ height: '150px', width: '150px' }}/></Col>
+                  <Col lg={6} className='mt-3'><img src={`https://mernrecepiebackend.onrender.com/${value.image}`} style={{ height: '300px', width: '300px' }}/></Col>
                 </Row>
                 <Row >
                   <Col lg={3}></Col>
